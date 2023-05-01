@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 85%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    position: fixed;
+    transition: 0.5s;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFCF10;
+}
+
+#imgLogo {
+    width: 100px;
+}
+
+#imgCupheadAparada {
+    width: 100px;
+}
+
+.menuNavegacao {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuNavegacao ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 65%;
+    padding: 0;
+}
+
+.menuNavegacao li {
+    font-weight: bold;
+    list-style: none;
+    padding: 8px 30px;
+    background-color: #63A0BF;
+    border-radius: 4px;
+    box-shadow: -5px 5px #000000;
+    position: relative;
+}
+
+.menuNavegacao li::before {
+    content: '';
+    background-image: url(../assets/img/linhaBranca.svg);
+    position: absolute;
+    background-size: cover;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 20px;
+}
+
+.imgBotaoRanking {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+
+.botaoRanking { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    background-color: #EF94B5;
+    border-radius: 4px;
+    box-shadow: -3px 6px 8px  #e97ea5;
+    position: relative;
+}
+
+.botaoRanking h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.botaoRanking::before {
+    content: '';
+    background-image: url(../assets/img/linhaBranca.svg);
+    position: absolute;
+    background-size: cover;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 20px;
+}
+
+.conteudoHome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#historia {
+    background-color: rgb(255, 207, 16, 0.44);
+    width: 100%;
+    height: 100vh;
+}
+
+.nav.alternada {
+    background-color: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgb(0, 0, 0, 0.2);
+}
