@@ -7,6 +7,7 @@
 
 .container {
     width: 85%;
+    height: 100%;
 }
 
 .nav {
@@ -17,13 +18,14 @@
     background-color: transparent;
     position: fixed;
     transition: 0.5s;
+    z-index: 1;
 }
 
 #home {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-color: #FFCF10;
 }
 
@@ -121,7 +123,10 @@
 #historia {
     background-color: rgb(255, 207, 16, 0.44);
     width: 100%;
-    height: 100vh;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav.alternada {
@@ -129,4 +134,175 @@
     backdrop-filter: blur(6px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.conteudoHistoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.retanguloBranco {
+    background-image: url(../assets/img/retanguloBranco.svg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-size: cover;
+    width: 92%;
+    height: 75%;
+    position: relative;
+}
+
+.retanguloBranco::before {
+    content: '';
+    background-image: url(../assets/img/simboloOuro.svg);
+    background-size: cover;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 70px;
+    height: 100px;
+}
+
+
+
+.textoHistoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 38%;
+    height: 70%;
+}
+
+.textoHistoria h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.textoHistoria p {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#imgCartaHistoria {
+    width: 400px;
+}
+
+#galeria {
+    width: 100%;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#galeria::before {
+    content: '';
+    background-image: url(../assets/img/cupheadMugmanCorda.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 80px;
+    height: 350px;
+    width: 160px;
+}
+
+#galeria .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.conteudoGaleria {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+}
+
+.conteudoGaleria h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.imagensJogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.imagemGaleria {
+    width: 700px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.imagemGaleria:hover {
+    box-shadow: -8px 8px #63A0BF;
+    transition: 200ms
+}
+
+.corridaCuphead {
+    display: flex;
+    justify-self: flex-end;
+    width: 85%;
+    height: 90px;
+}
+
+.conteudoCorrida {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#novidades {
+    background-image: url(../assets/img/fundoPapel.svg);
+    background-size: cover;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#novidades .container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textoNovidades {
+    width: 43%;
+}
+
+.textoNovidades h3{
+    font-size: 60px;
+    color: #433750;
+    margin-bottom: 20px;
+}
+
+.textoNovidades p{
+    font-size: 23px;
+    color: #433750;
+    line-height: 40px;
+}
+
+#criadores {
+    background-color: #FF3B01;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
