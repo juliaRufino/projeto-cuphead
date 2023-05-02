@@ -55,7 +55,8 @@
     padding: 0;
 }
 
-.menuNavegacao li {
+.menuNavegacao a li {
+    color: black;
     font-weight: bold;
     list-style: none;
     padding: 8px 30px;
@@ -63,6 +64,10 @@
     border-radius: 4px;
     box-shadow: -5px 5px #000000;
     position: relative;
+}
+
+.menuNavegacao a {
+    text-decoration: none;
 }
 
 .menuNavegacao li::before {
@@ -422,4 +427,84 @@
     background-color: #FFCF10;
     height: 20vh;
     width: 100%;
+}
+
+.desenvolvedoraMaoAlinha {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.desenvolvedoraAlinha {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 80%;
+}
+
+.maoCimaAlinha {
+    display: flex;
+    height: 18%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.imgDesenvolvedora {
+    width: 600px;
+}
+
+.imgMaoCima {
+    width: 80px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alinhaFooter {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 20%;
+}
+
+.imgLogoFooter {
+    width: 120px;
+    margin-left: 15px;
+}
+
+.navegacaoFooter {
+    height: 100px;
+}
+.navegacaoFooter ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    list-style: none;
+}
+
+.navegacaoFooter ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.navegacaoFooter ul li a:hover{
+    color: #767676
+}
+
+.imagensRedesSociais {
+    margin-right: 20px;
+    width: 40px;
 }
