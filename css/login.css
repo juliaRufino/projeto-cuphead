@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+}
+
+#base {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.metadeEsquerda {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.metadeEsquerda::before {
+    content: '';
+    background-image: url(../assets/img/trianguloAmarelo.svg);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    z-index: -1;
+}
+
+.metadeDireita {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerConteudo {
+    width: 80%;
+    height: 72%;
+}
+
+.metadeEsquerda .containerConteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textoLoginEsquerda h1 {
+    text-shadow: -3px 2px #FFCF10;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.textoLoginEsquerda h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #313131;
+}
+
+.metadeDireita .containerConteudo {
+    width: 90%;
+    height: 90%;
+}
+
+.alinhaSeta {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#imgSeta {
+    width: 40px;
+}
+
+.alinhaLogin {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.areaLogin {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.areaLogin h1{
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.areaInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.areaInput input{
+   height: 55px;
+   border-radius: 10px;
+   margin: 10px 0;
+   background-color: #f6f6f6;
+}
+
+.areaInput input:focus{
+    box-shadow: -3px 3px 2px #FFCF10;
+}
+
+.areaInput label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.areaLogin button{
+    width: 250px;
+    height: 52px;
+    border-radius: 15px;
+    background-color: #A0E1C0;
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+}
+
+.areaLogin span {
+    font-weight: 500;
+}

@@ -1,0 +1,21 @@
+@media screen and (max-width: 1284px){
+    .imgTituloCuphead {
+        width: 500px;
+    }
+
+    .imgIrmaosCuphead {
+        width: 300px;
+    }
+
+    #imgLogo {
+        width: 70px;
+    }
+
+    .menuNavegacao ul {
+        width: 35%;
+    }
+
+    .menuNavegacao a li {
+        padding: 8px 10px;
+    }
+}
