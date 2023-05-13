@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/feed.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Feed</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="menuLateral">
-        <img id="imgLogoSistema" src="./assets/img/logoSistema.svg">
+        <img id="imgLogoSistema" src="../assets/img/logoSistema.svg">
 
         <div class="botoesMenu">
            <a href="dashboard.html">
-             <div class="botao">
-                <img class="iconMenuLateral" src="./assets/img/iconDashboard.svg">
+             <div class="botao selecionado">
+                <img class="iconMenuLateral" src="../assets/img/iconDashboard.svg">
                 <h4>Dashboard</h4>
              </div>
            </a>
 
            <a href="feed.html">
-            <div class="botao selecionado">
-                <img class="iconMenuLateral" src="./assets/img/iconWorld.svg">
+            <div class="botao">
+                <img class="iconMenuLateral" src="../assets/img/iconWorld.svg">
                 <h4>Feed</h4>
             </div>
            </a>
 
            <a href="ranking.html">
             <div class="botao">
-                <img class="iconMenuLateral" src="./assets/img/iconRanking.svg">
+                <img class="iconMenuLateral" src="../assets/img/iconRanking.svg">
                 <h4>Ranking</h4>
             </div>
            </a>
@@ -40,25 +40,25 @@
     <div class="conteudo">
 
         <div class="menuTopo">
-            <img id="imgLogoTopo" src="./assets/img/logoSistemaTopo.svg">
+            <img id="imgLogoTopo" src="../assets/img/logoSistemaTopo.svg">
             <details class="perfil">
-                <summary><img id="imgPessoaTopo" src="./assets/img/iconPessoa.svg"> <h4>Olá, Julia</h4><img id="imgSetaTopo" src="./assets/img/setaBaixo.svg"></summary>
+                <summary><img id="imgPessoaTopo" src="../assets/img/iconPessoa.svg"> <h4>Olá, <span id="nomeUsuario"></span></h4><img id="imgSetaTopo" src="../assets/img/setaBaixo.svg"></summary>
                 <div class="menuPerfil">
                     <a href="#">
                         <div class="opcaoMenuPerfil">
-                            <img id="imgIconConfig" src="./assets/img/iconConfig.svg"> 
+                            <img id="imgIconConfig" src="../assets/img/iconConfig.svg"> 
                             <span>Configurações</span>
                         </div>
                     </a>
 
-                    <a href="index.html">
+                    <a href="../index.html">
                         <div class="opcaoMenuPerfil">
-                            <img id="imgIconConfig" src="./assets/img/iconLogout.svg"> 
+                            <img id="imgIconConfig" src="../assets/img/iconLogout.svg"> 
                             <span class="corLogout">Sair</span>
                         </div>
                     </a>
                 </div>
-              </details>  
+              </details>              
         </div>
 
         <div class="conteudoPrincipal">
@@ -69,3 +69,7 @@
     
 </body>
 </html>
+
+<script>
+    nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

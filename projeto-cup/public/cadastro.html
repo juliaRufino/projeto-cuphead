@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div id="base">
+
+        <div class="metadeEsquerda">
+            <div class="containerConteudo">
+                <h1>Preencha os campos ao lado para realizar o seu cadastro!</h1>
+                <img id="imgCupheadBolhaChiclete" src="./assets/img/cupheadBolhaChiclete.svg">
+            </div>
+        </div>
+
+        <div class="metadeDireita">
+            <div class="containerConteudo">
+                <div class="alinhaSeta">
+                    <a href="login.html"><img id="imgSeta" src="./assets/img/seta.svg"></a>
+                </div>
+
+                <div class="alinhaCadastro">
+                    <div class="areaCadastro">
+                        <h1>Cadastro</h1>
+
+                        <div class="areaInput">
+                            <label>Nome:</label>
+                            <input id="inputNome" type="text">
+                            <label>E-mail:</label>
+                            <input id="inputEmail" type="email">
+                            <label>Senha:</label>
+                            <input id="inputSenha" type="password">
+                            <label>Confirmar senha:</label>
+                            <input id="inputConfirmarSenha" type="password">
+                        </div>
+
+                        <div class="areaBotao">
+                            <a href="login.html"><button class="botaoCancelar">Cancelar</button></a>
+                            <button onclick="cadastrar()" class="botaoCadastrar">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script src="./js/funcoes.js"></script>
+<script>
+    function cadastrar() {
+        var nomeVar = inputNome.value;
+        var emailVar = inputEmail.value;
+        var senhaVar = inputSenha.value;
+        var confirmacaoSenhaVar = inputConfirmarSenha.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            alert("Ta tudo em branco!")
+
+            // finalizarAguardar();
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert("Deu tudo certo, amém!")
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                // limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>
