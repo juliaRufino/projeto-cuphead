@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/ranking.css">
     <title>Ranking</title>
@@ -51,21 +50,478 @@
             </a>
         </div>
 
-        <div class="conteudoPrincipal">
+        <div id="conteudoPrincipal">
             <h1>Ranking dos Chefões</h1>
             <p>
                 Monte seu ranking dos chefes principais de cuphead, classificando eles entre as dificuldade: 
                 fácil, médio, difícil e muito difícil.
             </p>
             <img id="imgInicioRanking" src="./assets/img/inicioRanking.svg">
-            <a href="#">
-                <div class="botaoInicioRanking">
+
+            <div class="botaoInicioRanking" onclick="iniciarRanking()">
                     <h3>Iniciar Ranking</h3>
+            </div>
+        </div>
+
+        <div id="rankingChefe1">
+            <h1 class="tituloRankingChefoes">Ranking dos Chefões</h1>
+            <div class="baseRanking">
+                <div class="listaLateralChefes">
+                    <h3>Chefes</h3>
+                    <div class="areaOpcoesChefe">
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe semBorda">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+                    </div>
                 </div>
-            </a>
+
+                <div class="areaClassificacaoChefe">
+                    <div class="alinhaNumeroChefe">
+                        <h2>1 / 19</h2>
+                    </div>
+                    <h2 class="tituloChefe">Chaunsey Chantenay</h2>
+                    <img class="imgChefeRanking" src="./assets/img/chefeCenoura.svg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeFacil" name="dificuldade" value="1">
+                            <label>Fácil</label>
+                        </div>
+                        
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeMedio" name="dificuldade" value="2">
+                            <label>Médio</label>
+                        </div>
+                        
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeDificil" name="dificuldade" value="3">
+                            <label>Difícil</label>
+                        </div>
+
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldade" value="4">
+                            <label>Muito Difícil</label>
+                        </div>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="cancelarRanking()">Cancelar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe()">Próximo</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingChefe2">
+            <h1 class="tituloRankingChefoes">Ranking dos Chefões</h1>
+            <div class="baseRanking">
+                <div class="listaLateralChefes">
+                    <h3>Chefes</h3>
+                    <div class="areaOpcoesChefe">
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe semBorda">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoChefe">
+                    <div class="alinhaNumeroChefe">
+                        <h2>2 / 19</h2>
+                    </div>
+                    <h2 class="tituloChefe">Il Melecone</h2>
+                    <img class="imgChefeRanking" src="./assets/img/chefeBolaAzul.svg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeFacil" name="dificuldade" value="1">
+                            <label>Fácil</label>
+                        </div>
+                        
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeMedio" name="dificuldade" value="2">
+                            <label>Médio</label>
+                        </div>
+                        
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeDificil" name="dificuldade" value="3">
+                            <label>Difícil</label>
+                        </div>
+
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldade" value="4">
+                            <label>Muito Difícil</label>
+                        </div>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="proximoChefe1()">Próximo</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="rankingChefe3">
+            <h1 class="tituloRankingChefoes">Ranking dos Chefões</h1>
+            <div class="baseRanking">
+                <div class="listaLateralChefes">
+                    <h3>Chefes</h3>
+                    <div class="areaOpcoesChefe">
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+
+                        <div class="opcaoChefe semBorda">
+                            <img class="imgOpcaoChefe" src="./assets/img/chefeCenoura.svg">
+                            <span>Chaunsey</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaClassificacaoChefe">
+                    <div class="alinhaNumeroChefe">
+                        <h2>3 / 19</h2>
+                    </div>
+                    <h2 class="tituloChefe">Geni Buarque</h2>
+                    <img class="imgChefeRanking" src="./assets/img/chefeGeni.svg">
+                    <h3 class="subTituloRadioButton">Classificação:</h3>
+                    <form>
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeFacil" name="dificuldade" value="1">
+                            <label>Fácil</label>
+                        </div>
+                        
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeMedio" name="dificuldade" value="2">
+                            <label>Médio</label>
+                        </div>
+                        
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeDificil" name="dificuldade" value="3">
+                            <label>Difícil</label>
+                        </div>
+
+                        <div class="radioButton">
+                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldade" value="4">
+                            <label>Muito Difícil</label>
+                        </div>
+                    </form>
+
+                    <div class="areaBotao">
+                        <button class="botaoRankingClassificacao voltar" onclick="voltarRanking1()">Voltar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="">Próximo</button>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
 
     </div>
     
 </body>
 </html>
+
+<script>
+    function iniciarRanking() {
+        document.getElementById("conteudoPrincipal").style.display = "none"
+        document.getElementById("rankingChefe1").style.display = "flex"
+    }
+
+    function cancelarRanking() {
+        document.getElementById("conteudoPrincipal").style.display = "flex"
+        document.getElementById("rankingChefe1").style.display = "none"
+    }
+
+    function voltarRanking() {
+        document.getElementById("rankingChefe1").style.display = "flex"
+        document.getElementById("rankingChefe2").style.display = "none"
+    }
+
+    function voltarRanking1() {
+        document.getElementById("rankingChefe2").style.display = "flex"
+        document.getElementById("rankingChefe3").style.display = "none"
+    }
+
+    function proximoChefe() {
+        document.getElementById("rankingChefe2").style.display = "flex"
+        document.getElementById("rankingChefe1").style.display = "none"
+    }
+
+    function proximoChefe1() {
+        document.getElementById("rankingChefe3").style.display = "flex"
+        document.getElementById("rankingChefe2").style.display = "none"
+    }
+</script>

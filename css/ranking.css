@@ -1,4 +1,8 @@
-.conteudoPrincipal {
+body {
+    display: flex;
+}
+
+#conteudoPrincipal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,25 +17,197 @@
     width: 1046px;
     height: 50px;
     border-radius: 0 0 10px 10px;
+    cursor: pointer;
 }
 
-.conteudoPrincipal h1 {
+#conteudoPrincipal h1 {
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-.conteudoPrincipal p {
+#conteudoPrincipal p {
     font-size: 20px;
     width: 800px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.conteudoPrincipal a {
+#conteudoPrincipal a {
     color: black;
     text-decoration: none;
 }
 
 #imgInicioRanking {
     border-radius: 10px 10px 0 0;
+}
+
+#rankingChefe1{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 88vw;
+    height: 92vh;
+}
+
+.tituloRankingChefoes {
+    font-size: 45px;
+}
+
+
+.baseRanking {
+    display: flex;
+    width: 90%;
+    height: 82%;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: -8px 8px 4px #A0E1C0;
+}
+
+.listaLateralChefes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    border-right: 3px solid black;
+}
+
+.listaLateralChefes h3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.areaOpcoesChefe {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 95%;
+    width: 100%;
+    border-radius: 0 0 0 15px;
+}
+
+.opcaoChefe {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    cursor: pointer;    
+}
+
+.opcaoChefe span{
+    margin-left: 15px;
+}
+
+.imgOpcaoChefe {
+    width: 58px;
+    margin: 5px 0 5px 15px;
+}
+
+.semBorda {
+    border: none;
+}
+
+.areaClassificacaoChefe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 85%;
+}
+
+.tituloChefe {
+    font-size: 45px;
+}
+
+.alinhaNumeroChefe {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+}
+
+.alinhaNumeroChefe h2 {
+        margin-right: 30px;
+}
+
+.imgChefeRanking {
+    width: 320px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.radioButton {
+    background-color: #F2F2F2;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid rgb(167, 167, 167);
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    box-shadow: -2px 2px 2px #cbcbcb;
+    cursor: pointer;
+}
+
+.areaBotao {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+
+.botaoRankingClassificacao {
+    font-size: 20px;
+    font-weight: 700;
+    width: 180px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.botaoRankingClassificacao:hover {
+    border: 2px solid black;
+}
+
+
+.voltar {
+    background-color: rgb(203, 15, 17, 0.65);
+}
+
+.proximo {
+    background-color: rgb(15, 152, 203, 0.65);
+}
+
+.subTituloRadioButton {
+    font-size: 30px;
+}
+
+#rankingChefe2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 88vw;
+    height: 92vh;
+}
+
+#rankingChefe3 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 88vw;
+    height: 92vh;
 }
