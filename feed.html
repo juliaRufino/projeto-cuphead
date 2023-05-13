@@ -41,13 +41,24 @@
 
         <div class="menuTopo">
             <img id="imgLogoTopo" src="./assets/img/logoSistemaTopo.svg">
-            <a href="#">
-                <div class="perfil">
-                    <img id="imgPessoaTopo" src="./assets/img/iconPessoa.svg">
-                    <h3>Olá, Julia</h3>
-                    <img id="imgSetaTopo" src="./assets/img/setaBaixo.svg">
+            <details class="perfil">
+                <summary><img id="imgPessoaTopo" src="./assets/img/iconPessoa.svg"> <h4>Olá, Julia</h4><img id="imgSetaTopo" src="./assets/img/setaBaixo.svg"></summary>
+                <div class="menuPerfil">
+                    <a href="#">
+                        <div class="opcaoMenuPerfil">
+                            <img id="imgIconConfig" src="./assets/img/iconConfig.svg"> 
+                            <span>Configurações</span>
+                        </div>
+                    </a>
+
+                    <a href="index.html">
+                        <div class="opcaoMenuPerfil">
+                            <img id="imgIconConfig" src="./assets/img/iconLogout.svg"> 
+                            <span class="corLogout">Sair</span>
+                        </div>
+                    </a>
                 </div>
-            </a>
+              </details>  
         </div>
 
         <div class="conteudoPrincipal">
