@@ -41,15 +41,6 @@ body {
     border-radius: 10px 10px 0 0;
 }
 
-#rankingChefe1{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 88vw;
-    height: 92vh;
-}
-
 .tituloRankingChefoes {
     font-size: 45px;
 }
@@ -138,6 +129,7 @@ body {
 
 .imgChefeRanking {
     width: 320px;
+    height: 320px;
 }
 
 form {
@@ -194,7 +186,7 @@ form {
     font-size: 30px;
 }
 
-#rankingChefe2 {
+.rankingChefe{
     display: none;
     flex-direction: column;
     align-items: center;
@@ -203,11 +195,6 @@ form {
     height: 92vh;
 }
 
-#rankingChefe3 {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 88vw;
-    height: 92vh;
+.chefeSelecionado {
+    background-color: #e6e6e6;
 }
