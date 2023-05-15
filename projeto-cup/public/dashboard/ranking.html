@@ -187,22 +187,22 @@
                     <h3 class="subTituloRadioButton">Classificação:</h3>
                     <form>
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeFacil" name="dificuldade" value="1">
+                            <input type="radio" id="dificuldadeFacil" name="dificuldadeChefe1" value="Fácil">
                             <label>Fácil</label>
                         </div>
                         
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeMedio" name="dificuldade" value="2">
+                            <input type="radio" id="dificuldadeMedio" name="dificuldadeChefe1" value="Médio">
                             <label>Médio</label>
                         </div>
                         
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeDificil" name="dificuldade" value="3">
+                            <input type="radio" id="dificuldadeDificil" name="dificuldadeChefe1" value="Difícil">
                             <label>Difícil</label>
                         </div>
 
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldade" value="4">
+                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldadeChefe1" value="Muito Difícil">
                             <label>Muito Difícil</label>
                         </div>
                     </form>
@@ -329,22 +329,22 @@
                     <h3 class="subTituloRadioButton">Classificação:</h3>
                     <form>
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeFacil" name="dificuldade" value="1">
+                            <input type="radio" id="dificuldadeFacil" name="dificuldadeChefe2" value="Fácil">
                             <label>Fácil</label>
                         </div>
                         
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeMedio" name="dificuldade" value="2">
+                            <input type="radio" id="dificuldadeMedio" name="dificuldadeChefe2" value="Médio">
                             <label>Médio</label>
                         </div>
                         
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeDificil" name="dificuldade" value="3">
+                            <input type="radio" id="dificuldadeDificil" name="dificuldadeChefe2" value="Difícil">
                             <label>Difícil</label>
                         </div>
 
                         <div class="radioButton">
-                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldade" value="4">
+                            <input type="radio" id="dificuldadeMuitoDificil" name="dificuldadeChefe2" value="Muito Difícil">
                             <label>Muito Difícil</label>
                         </div>
                     </form>
@@ -2765,10 +2765,75 @@
 
                     <div class="areaBotao">
                         <button class="botaoRankingClassificacao voltar" onclick="voltarRanking18()">Voltar</button>
-                        <button class="botaoRankingClassificacao proximo" onclick="">Finalizar</button>
+                        <button class="botaoRankingClassificacao proximo" onclick="finalizarRanking()">Finalizar</button>
                     </div>
                     
                 </div>
+            </div>
+        </div>
+
+        <div id="baseTelaTabelaRanking">
+            <h1>Sua Tabela do Ranking</h1>
+            <p>
+                Essa é a sua tabela de ranking dos chefões de acordo com a suas respostas.
+            </p>
+
+            <table class="tabelaRanking">
+                <tr>
+                  <th class="colunaFoto">Foto</th>
+                  <th>Nome</th>
+                  <th>Dificuldade</th>
+                </tr>
+                <tr>
+                  <td><img class="imgChefeTabela" src="../assets/img/chefeCenoura.svg"></td>
+                  <td>Chaunsey Chantenay</td>
+                  <td id="dificuldadeBoos1"></td>
+                </tr>
+                <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeBolaAzul.svg"></td>
+                    <td>Il Melecone</td>
+                    <td id="dificuldadeBoos2"></td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeGeni.svg"></td>
+                    <td>Geni Buarque</td>
+                    <td>Fácil</td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeGirassol.svg"></td>
+                    <td>Cactônio Spinoza</td>
+                    <td>Fácil</td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeSapo.svg"></td>
+                    <td>Escoaxo e Sopapo</td>
+                    <td>Fácil</td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeGarotaDoce.svg"></td>
+                    <td>Baronesa Bombom</td>
+                    <td>Fácil</td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefePalhaco.svg"></td>
+                    <td>Zobo o Palhaço</td>
+                    <td>Fácil</td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeGenio.svg"></td>
+                    <td>Genésio o Magnífico</td>
+                    <td>Fácil</td>
+                  </tr>
+                  <tr>
+                    <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
+                    <td>Fogo de Chão</td>
+                    <td>Fácil</td>
+                  </tr>
+              </table>
+
+              <div class="areaBotao">
+                <button class="botaotabelaRanking voltar" onclick="voltarParaRanking()">Voltar</button>
+                <button class="botaotabelaRanking enviar" onclick="">Enviar</button>
             </div>
         </div>
         
@@ -2973,6 +3038,22 @@
     function voltarRanking18() {
         document.getElementById("rankingChefe18").style.display = "flex"
         document.getElementById("rankingChefe19").style.display = "none"
+    }
+
+    function finalizarRanking() {
+        var dificuldadeEscolhidaChefe1 = document.querySelector('input[name="dificuldadeChefe1"]:checked').value;
+        var dificuldadeEscolhidaChefe2 = document.querySelector('input[name="dificuldadeChefe2"]:checked').value;
+        dificuldadeBoos1.innerHTML = dificuldadeEscolhidaChefe1
+        dificuldadeBoos2.innerHTML = dificuldadeEscolhidaChefe2
+
+
+        document.getElementById("baseTelaTabelaRanking").style.display = "flex"
+        document.getElementById("rankingChefe19").style.display = "none"
+    }
+
+    function voltarParaRanking() {
+        document.getElementById("rankingChefe19").style.display = "flex"
+        document.getElementById("baseTelaTabelaRanking").style.display = "none"
     }
 
 </script>
