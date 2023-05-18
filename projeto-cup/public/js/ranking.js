@@ -1,3 +1,5 @@
+const btnEnviar = document.getElementById('btnEnviar');
+
 function iniciarRanking() {
     document.getElementById("conteudoPrincipal").style.display = "none"
     document.getElementById("rankingChefe1").style.display = "flex"
@@ -193,13 +195,7 @@ function voltarRanking18() {
     document.getElementById("rankingChefe19").style.display = "none"
 }
 
-var escolhasDificuldade = []
 function finalizarRanking() {
-    for (var i = 1; i <= 19; i++) {
-        escolhas = document.querySelector(`input[name="dificuldadeChefe${i}"]:checked`).value;
-        escolhasDificuldade.push(escolhas)
-    }
-
     document.getElementById("baseTelaTabelaRanking").style.display = "flex"
     document.getElementById("rankingChefe19").style.display = "none"
 }
@@ -208,3 +204,36 @@ function voltarParaRanking() {
     document.getElementById("rankingChefe19").style.display = "flex"
     document.getElementById("baseTelaTabelaRanking").style.display = "none"
 }
+
+var fkUsuarioVar = sessionStorage.ID_USUARIO;
+
+btnEnviar.addEventListener('click', () => {
+    fetch("/chefe/exibirRanking", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            fkUsuarioServer: fkUsuarioVar
+        })
+
+    }).then((resposta) => {
+        if (resposta.ok) {
+            console.log(resposta)
+            resposta.json().then((tabela) => {
+                tabela.forEach(linha => {
+                    document.getElementById('corpoTabela').innerHTML += `
+                    <tr>
+                        <td><img class="imgChefeTabela" src="${linha.foto}"></td>
+                        <td>${linha.nome}</td>
+                        <td>${linha.dificuldade}</td>
+                    </tr>
+                    `
+                });
+            })
+        } else {
+            console.log('Deu erro no then')
+        }
+    })
+})
+
