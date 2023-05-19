@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -97,11 +98,23 @@
 
             <div class="areaGraficos">
                 <div class="quadradoGrafico">
-
+                    <div class="tituloGrafico">
+                        <img src="../assets/img/iconRanking.png">
+                        <span>TOP 10 chefe considerados mais díficeis</span>
+                    </div>
+                    <div class="areaGrafico">
+                        <canvas id="myChart2"></canvas>
+                    </div>
                 </div>
 
                 <div class="quadradoGrafico">
-                    
+                    <div class="tituloGrafico">
+                        <img src="../assets/img/iconIlha.png">
+                        <span>Ilhas Tinteiro com chefes considerados mais dificeis</span>
+                    </div>
+                    <div class="areaGrafico">
+                        <canvas id="myChart1"></canvas>
+                    </div>
                 </div>
             </div>
     </div>
@@ -111,4 +124,49 @@
 
 <script>
     nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
+    
+    const grafico1 = document.getElementById('myChart1');
+
+    new Chart(grafico1, {
+        type: 'pie',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5],
+            borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+            x: {
+            beginAtZero: true
+            }
+        }
+        }
+    });
+
+    const grafico2 = document.getElementById('myChart2');
+
+    new Chart(grafico2, {
+        type: 'bar',
+        data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5],
+            borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+            x: {
+            beginAtZero: true
+            }
+        },
+        indexAxis: 'y',
+        }
+    });
+    
+
 </script>

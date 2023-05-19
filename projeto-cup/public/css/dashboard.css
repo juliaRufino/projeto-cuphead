@@ -31,6 +31,9 @@ body {
 }
 
 .quadradoGrafico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     border-radius: 15px;
     width: 45%;
@@ -75,4 +78,37 @@ body {
 .nomeChefe {
     font-weight: 700;
     font-size: 40px;
+}
+
+.quadradoGrafico img {
+    width: 100px;
+}
+
+.tituloGrafico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 20%;
+}
+
+.tituloGrafico span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.areaGrafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+}
+
+canvas {
+    width: 100%;
 }

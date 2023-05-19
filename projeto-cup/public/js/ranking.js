@@ -1,4 +1,4 @@
-const btnEnviar = document.getElementById('btnEnviar');
+
 
 function iniciarRanking() {
     document.getElementById("conteudoPrincipal").style.display = "none"
@@ -195,20 +195,26 @@ function voltarRanking18() {
     document.getElementById("rankingChefe19").style.display = "none"
 }
 
+function certezafinalizarRanking() {
+    document.getElementById("fundoModal").style.display = "flex"
+}
+
 function finalizarRanking() {
     document.getElementById("baseTelaTabelaRanking").style.display = "flex"
+    document.getElementById("fundoModal").style.display = "none"
     document.getElementById("rankingChefe19").style.display = "none"
 }
 
 function voltarParaRanking() {
     document.getElementById("rankingChefe19").style.display = "flex"
     document.getElementById("baseTelaTabelaRanking").style.display = "none"
+    document.getElementById("fundoModal").style.display = "none"
 }
 
 var fkUsuarioVar = sessionStorage.ID_USUARIO;
 
-btnEnviar.addEventListener('click', () => {
-    fetch("/chefe/exibirRanking", {
+async function obterRanking() {
+    await fetch("/chefe/exibirRanking", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -235,5 +241,7 @@ btnEnviar.addEventListener('click', () => {
             console.log('Deu erro no then')
         }
     })
-})
+}
+
+
 
