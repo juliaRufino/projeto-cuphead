@@ -20,7 +20,16 @@ function inserirVotoUsuario(fkUsuario, fkChefe, dificuldade) {
     return database.executar(instrucao);
 }
 
+function exibirQtdUserRanking() {
+    var instrucao = `
+    SELECT COUNT(DISTINCT fkUsuario) as quantidadeUsuario FROM votoUsuario;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     inserirVotoUsuario,
     listar,
+    exibirQtdUserRanking
 };

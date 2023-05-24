@@ -19,7 +19,32 @@ function exibirRanking(fkUsuario) {
     return database.executar(instrucao);
 }
 
+// função
+function exibirChefeMaisDificil() {
+    var instrucao = `
+    SELECT chefe.foto AS foto, chefe.nome AS nome, COUNT(dificuldade) AS quantidadeDificuldade FROM votoUsuario JOIN chefe
+    ON fkChefe = idChefe
+    WHERE dificuldade LIKE 'Muito Difícil'
+    GROUP BY chefe.nome, chefe.foto ORDER BY quantidadeDificuldade DESC limit 1;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function exibirChefeMaisFacil() {
+    var instrucao = `
+    SELECT chefe.foto AS foto, chefe.nome AS nome, COUNT(dificuldade) as quantidadeDificuldade FROM votoUsuario JOIN chefe
+    ON fkChefe = idChefe
+    WHERE dificuldade LIKE 'Fácil'
+    GROUP BY chefe.nome, chefe.foto ORDER BY quantidadeDificuldade DESC limit 1;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     exibirRanking,
     listar,
+    exibirChefeMaisDificil,
+    exibirChefeMaisFacil
 };

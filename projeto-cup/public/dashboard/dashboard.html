@@ -74,7 +74,7 @@
                     <h3>Numero de usuários que fizeram o ranking:</h3>
                     <div class="conteudoKPI">
                         <img src="../assets/img/mugmanNumeroUsuario.svg">
-                        <div class="areaNumero">
+                        <div id="conteudoQtdUsuario" class="areaNumero">
                             <span id="numeroUsuario">25</span>
                             <span class="subtituloUsuario">Usuários</span>
                         </div>
@@ -83,17 +83,17 @@
 
                 <div class="quadradoDados dificil">
                     <h3>Chefe considerado mais difícil:</h3>
-                    <div class="conteudoKPI">
+                    <div id="conteudoChefeDificil" class="conteudoKPI">
                         <img class="imgChefeDashboardDificilFacil" src="../assets/img/chefeReiDado.svg">
                         <div class="areaNumero">
-                            <span class="nomeChefe">Rei Dado</span>
+                            <span id="nomeChefeDificil" class="nomeChefe">Rei Dado</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="quadradoDados facil">
                     <h3>Chefe considerado mais fácil:</h3>
-                    <div class="conteudoKPI">
+                    <div id="conteudoChefeFacil" class="conteudoKPI">
                         <img class="imgChefeDashboardDificilFacil" src="../assets/img/chefeDiabo.svg">
                         <div class="areaNumero">
                             <span class="nomeChefe">Diabo</span>
@@ -244,7 +244,6 @@ function atualizarGrafico(idAquario, dados, myChart) {
                 console.log(dados);
 
                 let avisoCaptura = document.getElementById(`avisoCaptura${idAquario}`)
-                avisoCaptura.innerHTML = ""
 
 
                 if (novoRegistro[0].quantidadeDificuldade == dados.labels[dados.labels.length - 1]) {
@@ -270,3 +269,5 @@ function atualizarGrafico(idAquario, dados, myChart) {
 
 }
 </script>
+
+<script src="../js/dashboard.js"></script>

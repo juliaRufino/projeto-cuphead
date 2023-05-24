@@ -15,4 +15,8 @@ router.post("/inserirVotoUsuario", function (req, res) {
     votoUsuarioController.inserirVotoUsuario(req, res);
 })
 
+router.get("/exibirQtdUserRanking", function (req, res) {
+    votoUsuarioController.exibirQtdUserRanking(req, res);
+})
+
 module.exports = router;

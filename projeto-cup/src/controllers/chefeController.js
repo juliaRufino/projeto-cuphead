@@ -26,7 +26,7 @@ function listar(req, res) {
 
 function exibirRanking(req, res) {
     var fkUsuario = req.body.fkUsuarioServer
-    if(fkUsuario == undefined) {
+    if (fkUsuario == undefined) {
         res.status(400).send('A fk do usuário não foi enviada!')
     } else {
         chefeModel.exibirRanking(fkUsuario).then((resultado) => {
@@ -42,10 +42,42 @@ function exibirRanking(req, res) {
     }
 }
 
+function exibirChefeMaisDificil(req, res) {
+
+    chefeModel.exibirChefeMaisDificil().then((resultado) => {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado)
+        } else {
+            res.status(204).send('Não chegou nenhum resultado!')
+        }
+    }).catch((erro) => {
+        console.log(erro)
+        res.status(500).json(erro.sqlMessage)
+    })
+
+}
+
+function exibirChefeMaisFacil(req, res) {
+
+    chefeModel.exibirChefeMaisFacil().then((resultado) => {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado)
+        } else {
+            res.status(204).send('Não chegou nenhum resultado!')
+        }
+    }).catch((erro) => {
+        console.log(erro)
+        res.status(500).json(erro.sqlMessage)
+    })
+
+}
+
 
 
 module.exports = {
     exibirRanking,
     listar,
-    testar
+    testar,
+    exibirChefeMaisDificil,
+    exibirChefeMaisFacil
 }

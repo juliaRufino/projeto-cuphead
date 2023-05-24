@@ -15,5 +15,12 @@ router.post("/exibirRanking", function (req, res) {
     chefeController.exibirRanking(req, res);
 })
 
+router.get("/exibirChefeMaisDificil", function (req, res) {
+    chefeController.exibirChefeMaisDificil(req, res);
+})
+
+router.get("/exibirChefeMaisFacil", function (req, res) {
+    chefeController.exibirChefeMaisFacil(req, res);
+})
 
 module.exports = router;
