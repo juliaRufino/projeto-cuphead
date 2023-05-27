@@ -77,10 +77,47 @@ function exibirQtdUserRanking(req, res) {
             );
 }
 
+function deletarDadosRanking(req, res) {
+    var fkUsuario = req.params.fkUsuario;
+
+    votoUsuarioModel.deletarDadosRanking(fkUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro os dados do ranking: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function verificarUsuarioRanking(req, res) {
+    var fkUsuario = req.params.fkUsuario;
+
+    votoUsuarioModel.verificarUsuarioRanking(fkUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro os dados do ranking: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
 module.exports = {
     inserirVotoUsuario,
     listar,
     testar,
-    exibirQtdUserRanking
+    exibirQtdUserRanking,
+    deletarDadosRanking,
+    verificarUsuarioRanking
 }

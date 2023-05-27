@@ -205,6 +205,18 @@ function finalizarRanking() {
     document.getElementById("rankingChefe19").style.display = "none"
 }
 
+function exibirRanking() {
+    document.getElementById("baseTelaTabelaRanking").style.display = "flex"
+    document.getElementById("rankingChefe1").style.display = "none"
+    document.getElementById("conteudoPrincipal").style.display = "none"
+}
+
+function voltarPaginaInicial() {
+    document.getElementById("baseTelaTabelaRanking").style.display = "none"
+    document.getElementById("conteudoPrincipal").style.display = "flex"
+}
+
+
 function voltarParaRanking() {
     document.getElementById("rankingChefe19").style.display = "flex"
     document.getElementById("baseTelaTabelaRanking").style.display = "none"

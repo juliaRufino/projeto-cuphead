@@ -10,7 +10,7 @@
     <title>Ranking</title>
 </head>
 
-<body>
+<body onload="verificarUsuarioRanking(sessionStorage.ID_USUARIO)">
     <div class="menuLateral">
         <img id="imgLogoSistema" src="../assets/img/logoSistema.svg">
 
@@ -2929,7 +2929,7 @@
 
 
             <div class="areaBotao">
-                <button class="botaotabelaRanking voltar" onclick="voltarParaRanking()">Refazer</button>
+                <button class="botaotabelaRanking voltar" onclick="deletarDadosRanking(sessionStorage.ID_USUARIO)">Refazer</button>
                 <button class="botaotabelaRanking enviar" onclick="">Publicar</button>
             </div>
         </div>
@@ -2992,6 +2992,50 @@
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
         })
+    }
+
+    function deletarDadosRanking(fkUsuario) {
+        fetch(`/votoUsuario/deletarDadosRanking/${fkUsuario}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                console.log("Dados do ranking deletados com sucesso");
+                verificarUsuarioRanking(sessionStorage.ID_USUARIO)
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function verificarUsuarioRanking(fkUsuario) {
+        fetch(`/votoUsuario/verificarUsuarioRanking/${fkUsuario}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                resposta.json().then((json)=> {
+                    if(json[0].quantidadeLinha > 0) {
+                        exibirRanking()
+                        obterRanking()
+                    }else {
+                        voltarPaginaInicial()
+                    }
+                })
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
     }
 
 </script>

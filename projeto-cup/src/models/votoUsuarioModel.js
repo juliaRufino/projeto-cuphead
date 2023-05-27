@@ -28,8 +28,28 @@ function exibirQtdUserRanking() {
     return database.executar(instrucao);
 }
 
+function deletarDadosRanking(fkUsuario) {
+    var instrucao = `
+    DELETE FROM votoUsuario
+    WHERE fkUsuario = ${fkUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function verificarUsuarioRanking(fkUsuario) {
+    var instrucao = `
+    SELECT COUNT(idVotoUsuario) AS quantidadeLinha  FROM votoUsuario
+    WHERE fkUsuario = ${fkUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     inserirVotoUsuario,
     listar,
-    exibirQtdUserRanking
+    exibirQtdUserRanking,
+    deletarDadosRanking,
+    verificarUsuarioRanking
 };
