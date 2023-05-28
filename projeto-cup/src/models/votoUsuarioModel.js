@@ -46,10 +46,34 @@ function verificarUsuarioRanking(fkUsuario) {
     return database.executar(instrucao);
 }
 
+function chefePorRegiao() {
+    var instrucao = `
+    SELECT chefe.regiao, COUNT(dificuldade) as quantidadeDificuldade FROM votoUsuario JOIN chefe
+    ON fkChefe = idChefe
+    WHERE dificuldade LIKE 'Muito Difícil'
+    GROUP BY chefe.regiao ORDER BY quantidadeDificuldade;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function top10Chefes() {
+    var instrucao = `
+    SELECT chefe.nome, COUNT(dificuldade) as quantidadeDificuldade FROM votoUsuario JOIN chefe
+    ON fkChefe = idChefe
+    WHERE dificuldade LIKE 'Muito Difícil'
+    GROUP BY chefe.nome ORDER BY quantidadeDificuldade DESC limit 10;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     inserirVotoUsuario,
     listar,
     exibirQtdUserRanking,
     deletarDadosRanking,
-    verificarUsuarioRanking
+    verificarUsuarioRanking,
+    chefePorRegiao,
+    top10Chefes
 };

@@ -113,11 +113,45 @@ function verificarUsuarioRanking(req, res) {
         );
 }
 
+function chefePorRegiao(req, res) {
+    votoUsuarioModel.chefePorRegiao()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro bos dados do chefe: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function top10Chefes(req, res) {
+    votoUsuarioModel.top10Chefes()
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro bos dados do chefe: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     inserirVotoUsuario,
     listar,
     testar,
     exibirQtdUserRanking,
     deletarDadosRanking,
-    verificarUsuarioRanking
+    verificarUsuarioRanking,
+    chefePorRegiao,
+    top10Chefes
 }

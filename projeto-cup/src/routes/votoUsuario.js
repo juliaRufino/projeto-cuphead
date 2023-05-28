@@ -27,4 +27,12 @@ router.get("/verificarUsuarioRanking/:fkUsuario", function (req, res) {
     votoUsuarioController.verificarUsuarioRanking(req, res);
 })
 
+router.get("/chefePorRegiao", function (req, res) {
+    votoUsuarioController.chefePorRegiao(req, res);
+})
+
+router.get("/top10Chefes", function (req, res) {
+    votoUsuarioController.top10Chefes(req, res);
+})
+
 module.exports = router;
