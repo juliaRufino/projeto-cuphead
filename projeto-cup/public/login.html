@@ -60,10 +60,10 @@
 
         if (emailVar == "" || senhaVar == "") {
             Swal.fire({
-            title: 'Error!',
-            text: 'Preencha os campos',
-            icon: 'error',
-            confirmButtonText: 'Cool'
+            title: 'Erro!',
+            text: 'Preencha os campos!',
+            iconHtml: '<img src="./assets/img/iconErro.jpg" width="150px">',
+            confirmButtonText: 'Ok'
             })
             return false;
         }

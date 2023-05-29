@@ -63,10 +63,10 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             Swal.fire({
-            title: 'Error!',
+            title: 'Erro!',
             text: 'Preencha os campos!',
-            icon: 'error',
-            confirmButtonText: 'Cool'
+            iconHtml: '<img src="./assets/img/iconMugmanErro.jpg" width="150px">',
+            confirmButtonText: 'Ok'
             })
             return false;
         }
@@ -89,7 +89,12 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                alert("Deu tudo certo, amém!")
+                Swal.fire({
+                title: 'Sucesso!',
+                text: 'Cadastro realizado com sucesso!',
+                iconHtml: '<img src="./assets/img/iconCupheadSmile.jpg" width="150px">',
+                confirmButtonText: 'Ok'
+                })
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
