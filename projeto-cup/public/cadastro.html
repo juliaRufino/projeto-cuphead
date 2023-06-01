@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Cadastro</title>
 </head>
@@ -69,6 +70,30 @@
             confirmButtonText: 'Ok'
             })
             return false;
+        } else if(emailVar.indexOf("@") == -1 ) {
+            Swal.fire({
+            title: 'Erro!',
+            text: 'Insira um email válido!',
+            iconHtml: '<img src="./assets/img/iconMugmanErro.jpg" width="150px">',
+            confirmButtonText: 'Ok'
+            })
+            return false
+        } else if(senhaVar != confirmacaoSenhaVar) {
+            Swal.fire({
+            title: 'Erro!',
+            text: 'Os campos senha e confirmar devem ser iguais!',
+            iconHtml: '<img src="./assets/img/iconMugmanErro.jpg" width="150px">',
+            confirmButtonText: 'Ok'
+            })
+            return false
+        } else if (senhaVar.length < 8) {
+            Swal.fire({
+            title: 'Erro!',
+            text: 'A senha deve ter no mínimo 8 caracteres!',
+            iconHtml: '<img src="./assets/img/iconMugmanErro.jpg" width="150px">',
+            confirmButtonText: 'Ok'
+            })
+            return false
         }
 
         // Enviando o valor da nova input

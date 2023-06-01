@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.ico">
      <!-- scripts do Chart.js - 2022-1 -->
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
@@ -54,13 +55,6 @@
             <details class="perfil">
                 <summary><img id="imgPessoaTopo" src="../assets/img/iconPessoa.svg"> <h4>Olá, <span id="nomeUsuario"></span></h4><img id="imgSetaTopo" src="../assets/img/setaBaixo.svg"></summary>
                 <div class="menuPerfil">
-                    <a href="#">
-                        <div class="opcaoMenuPerfil">
-                            <img id="imgIconConfig" src="../assets/img/iconConfig.svg"> 
-                            <span>Configurações</span>
-                        </div>
-                    </a>
-
                     <a href="../index.html">
                         <div class="opcaoMenuPerfil">
                             <img id="imgIconConfig" src="../assets/img/iconLogout.svg"> 
@@ -170,7 +164,7 @@ function carregarGrafico2() {
     data: {
       labels: [boss[0], boss[1], boss[2], boss[3], boss[4], boss[5], boss[6], boss[7], boss[8], boss[9]],
       datasets: [{
-        label: '# of Votes',
+        label: 'Votos',
         data: [dificuldade[0], dificuldade[1], dificuldade[2], dificuldade[3], dificuldade[4], dificuldade[5], dificuldade[6], dificuldade[7], dificuldade[8], dificuldade[9]],
         borderWidth: 1,
         backgroundColor: [

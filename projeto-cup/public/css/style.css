@@ -614,7 +614,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menuPerfil {
-    height: 100px;
+    height: 50px;
     border-right: 1px solid black;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
@@ -628,7 +628,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 50%;
+    padding: 10px 0;
 }
 
 .opcaoMenuPerfil span{

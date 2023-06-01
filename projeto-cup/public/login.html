@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/favicon.ico">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="sweetalert2.min.css">
@@ -101,6 +102,12 @@
                 });
 
             } else {
+                Swal.fire({
+                title: 'Erro!',
+                text: 'E-mail ou senha inválidos!',
+                iconHtml: '<img src="./assets/img/cupheadGhost.png" width="150px">',
+                confirmButtonText: 'Ok'
+                })
 
                 console.log("Houve um erro ao tentar realizar o login!");
 
