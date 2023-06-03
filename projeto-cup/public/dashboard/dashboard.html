@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,14 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.ico">
-     <!-- scripts do Chart.js - 2022-1 -->
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
-     <script src="../js/funcoes.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/chart.js%22%3E"></script>
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/3f0399636b.js" crossorigin="anonymous"></script>
+    <script src="../js/funcoes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js%22%3E"></script>
     <title>Dashboard</title>
 </head>
 
@@ -24,28 +25,21 @@
         <img id="imgLogoSistema" src="../assets/img/logoSistema.svg">
 
         <div class="botoesMenu">
-           <a href="dashboard.html">
-             <div class="botao selecionado">
-                <img class="iconMenuLateral" src="../assets/img/iconDashboard.svg">
-                <h4>Dashboard</h4>
-             </div>
-           </a>
+            <a href="dashboard.html">
+                <div class="botao selecionado">
+                    <img class="iconMenuLateral" src="../assets/img/iconDashboard.svg">
+                    <h4>Dashboard</h4>
+                </div>
+            </a>
 
-           <a href="feed.html">
-            <div class="botao">
-                <img class="iconMenuLateral" src="../assets/img/iconWorld.svg">
-                <h4>Feed</h4>
-            </div>
-           </a>
-
-           <a href="ranking.html">
-            <div class="botao">
-                <img class="iconMenuLateral" src="../assets/img/iconRanking.svg">
-                <h4>Ranking</h4>
-            </div>
-           </a>
+            <a href="ranking.html">
+                <div class="botao">
+                    <img class="iconMenuLateral" src="../assets/img/iconRanking.svg">
+                    <h4>Ranking</h4>
+                </div>
+            </a>
         </div>
-        
+
     </div>
 
     <div class="conteudo">
@@ -53,198 +47,212 @@
         <div class="menuTopo">
             <img id="imgLogoTopo" src="../assets/img/logoSistemaTopo.svg">
             <details class="perfil">
-                <summary><img id="imgPessoaTopo" src="../assets/img/iconPessoa.svg"> <h4>Olá, <span id="nomeUsuario"></span></h4><img id="imgSetaTopo" src="../assets/img/setaBaixo.svg"></summary>
+                <summary><img id="imgPessoaTopo" src="../assets/img/iconPessoa.svg">
+                    <h4>Olá, <span id="nomeUsuario"></span></h4><img id="imgSetaTopo" src="../assets/img/setaBaixo.svg">
+                </summary>
                 <div class="menuPerfil">
                     <a href="../index.html">
                         <div class="opcaoMenuPerfil">
-                            <img id="imgIconConfig" src="../assets/img/iconLogout.svg"> 
+                            <img id="imgIconConfig" src="../assets/img/iconLogout.svg">
                             <span class="corLogout">Sair</span>
                         </div>
                     </a>
                 </div>
-              </details>              
+            </details>
         </div>
 
 
-            <div class="areaKPI">
-                <div class="quadradoDados">
-                    <h3>Numero de usuários que fizeram o ranking:</h3>
-                    <div class="conteudoKPI">
-                        <img src="../assets/img/mugmanNumeroUsuario.svg">
-                        <div id="conteudoQtdUsuario" class="areaNumero">
-                            <span id="numeroUsuario">0</span>
-                            <span class="subtituloUsuario">Usuários</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quadradoDados dificil">
-                    <h3>Chefe considerado mais difícil:</h3>
-                    <div id="conteudoChefeDificil" class="conteudoKPI">
-                        <img class="imgChefeDashboardDificilFacil" src="../assets/img/chefeReiDado.svg">
-                        <div class="areaNumero">
-                            <span id="nomeChefeDificil" class="nomeChefe">--</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quadradoDados facil">
-                    <h3>Chefe considerado mais fácil:</h3>
-                    <div id="conteudoChefeFacil" class="conteudoKPI">
-                        <img class="imgChefeDashboardDificilFacil" src="../assets/img/chefeDiabo.svg">
-                        <div class="areaNumero">
-                            <span class="nomeChefe">--</span>
-                        </div>
+        <div class="areaKPI">
+            <div class="quadradoDados">
+                <h3>Numero de usuários que fizeram o ranking:</h3>
+                <div class="conteudoKPI">
+                    <img src="../assets/img/mugmanNumeroUsuario.svg">
+                    <div id="conteudoQtdUsuario" class="areaNumero">
+                        <span id="numeroUsuario">0</span>
+                        <span class="subtituloUsuario">Usuários</span>
                     </div>
                 </div>
             </div>
 
-            <div class="areaGraficos">
-                <div class="quadradoGrafico">
-                    <div class="tituloGrafico">
-                        <img src="../assets/img/iconRanking.png">
-                        <span>TOP 10 chefe considerados mais díficeis</span>
-                    </div>
-                    <div class="areaGrafico">
-                        <canvas id="myChart"></canvas>
-                    </div>
-                </div>
-
-                <div class="quadradoGrafico">
-                    <div class="tituloGrafico">
-                        <img src="../assets/img/iconIlha.png">
-                        <span>Ilhas Tinteiro com chefes considerados mais dificeis</span>
-                    </div>
-                    <div class="areaGrafico">
-                        <canvas id="myChart2"></canvas>
+            <div class="quadradoDados dificil">
+                <h3>Chefe considerado mais difícil:</h3>
+                <div id="conteudoChefeDificil" class="conteudoKPI">
+                    <img class="imgChefeDashboardDificilFacil" src="../assets/img/chefeReiDado.svg">
+                    <div class="areaNumero">
+                        <span id="nomeChefeDificil" class="nomeChefe">--</span>
                     </div>
                 </div>
             </div>
+
+            <div class="quadradoDados facil">
+                <h3>Chefe considerado mais fácil:</h3>
+                <div id="conteudoChefeFacil" class="conteudoKPI">
+                    <img class="imgChefeDashboardDificilFacil" src="../assets/img/chefeDiabo.svg">
+                    <div class="areaNumero">
+                        <span class="nomeChefe">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="areaGraficos">
+            <div class="quadradoGrafico">
+                <div class="tituloGrafico">
+                    <img src="../assets/img/iconRanking.png">
+                    <span>TOP 10 chefe considerados mais díficeis</span>
+                </div>
+                <div class="areaGrafico">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+            <div class="quadradoGrafico">
+                <div class="tituloGrafico">
+                    <img src="../assets/img/iconIlha.png">
+                    <span>Porcentagem de Ilhas Tinteiro com chefes considerados mais dificeis</span>
+                </div>
+                <div class="areaGrafico">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
-    
+
 </body>
+
 </html>
 
 <script>
-nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
+    nomeUsuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-// Gráfico dos top 10 chefes
-var boss = []
-var dificuldade = []
+    // Gráfico dos top 10 chefes
+    var boss = []
+    var dificuldade = []
 
-const ctx1 = document.getElementById('myChart')
+    const ctx1 = document.getElementById('myChart')
 
-fetch(`/votoUsuario/top10Chefes`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(function (resposta) {
-
-            if (resposta.ok) {
-                resposta.json().then((json)=> {
-                    console.log(json)
-                    json.forEach(element => {
-                        boss.push(element.nome)
-                        dificuldade.push(element.quantidadeDificuldade)
-                    });
-                }).then(()=>{
-                    carregarGrafico2()
-                })
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-
-function carregarGrafico2() {
-    new Chart(ctx1, {
-    type: 'bar',
-    data: {
-      labels: [boss[0], boss[1], boss[2], boss[3], boss[4], boss[5], boss[6], boss[7], boss[8], boss[9]],
-      datasets: [{
-        label: 'Votos',
-        data: [dificuldade[0], dificuldade[1], dificuldade[2], dificuldade[3], dificuldade[4], dificuldade[5], dificuldade[6], dificuldade[7], dificuldade[8], dificuldade[9]],
-        borderWidth: 1,
-        backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(255, 100, 86)',
-        'rgb(65,105,225)',
-        'rgb(0,206,209)',
-        'rgb(218,165,32)',
-        'rgb(255,255,0)',
-        'rgb(240,128,128)',
-        'rgb(255,99,71)'
-        ],
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+    fetch(`/votoUsuario/top10Chefes`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
         }
-      }
-    }
-  });
-}
+    }).then(function (resposta) {
 
+        if (resposta.ok) {
+            resposta.json().then((json) => {
+                console.log(json)
+                json.forEach(element => {
+                    boss.push(element.nome)
+                    dificuldade.push(element.quantidadeDificuldade)
+                });
+            }).then(() => {
+                carregarGrafico2()
+            })
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
 
-// Gráfico de chefe por região
-var regioes = []
-const ctx2 = document.getElementById('myChart2')
-
-fetch(`/votoUsuario/chefePorRegiao`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
+    function carregarGrafico2() {
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: [boss[0], boss[1], boss[2], boss[3], boss[4], boss[5], boss[6], boss[7], boss[8], boss[9]],
+                datasets: [{
+                    label: 'Votos',
+                    data: [dificuldade[0], dificuldade[1], dificuldade[2], dificuldade[3], dificuldade[4], dificuldade[5], dificuldade[6], dificuldade[7], dificuldade[8], dificuldade[9], 0],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(255, 100, 86)',
+                        'rgb(65,105,225)',
+                        'rgb(0,206,209)',
+                        'rgb(218,165,32)',
+                        'rgb(255,255,0)',
+                        'rgb(240,128,128)',
+                        'rgb(255,99,71)'
+                    ],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-        }).then(function (resposta) {
-
-            if (resposta.ok) {
-                resposta.json().then((json)=> {
-                    console.log(json)
-                    var soma = json[0].quantidadeDificuldade + json[1].quantidadeDificuldade + json[2].quantidadeDificuldade + json[3].quantidadeDificuldade
-                    var ilha2Percentual = (json[0].quantidadeDificuldade/soma) * 100
-                    var ilhaInfernalPercentual = (json[1].quantidadeDificuldade/soma) * 100
-                    var ilha3Percentual = (json[2].quantidadeDificuldade/soma) * 100
-                    var ilha1Percentual = (json[3].quantidadeDificuldade/soma) * 100
-
-                    regioes.push(Math.round(ilha2Percentual))
-                    regioes.push(Math.round(ilhaInfernalPercentual))
-                    regioes.push(Math.round(ilha3Percentual))
-                    regioes.push(Math.round(ilha1Percentual))
-                }).then(()=>{
-                    carregarGrafico()
-                })
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
         });
+    }
 
-function carregarGrafico() {
-    new Chart(ctx2, {
-    type: 'doughnut',
-    data: {
-      labels: ['Ilha Tinteiro II', 'Ilha Tinteiro Infernal', 'Ilha Tinteiro III', 'Ilha Tinteiro I'],
-      datasets: [{
-        label: '# of Votes',
-        data: [regioes[0], regioes[1], regioes[2], regioes[3]],
-        backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(255, 100, 86)'
-        ],
-        hoverOffset: 4
-      }]
-    },
-  });
-}
+
+    // Gráfico de chefe por região
+    var regioes = []
+    const ctx2 = document.getElementById('myChart2')
+
+    fetch(`/votoUsuario/chefePorRegiao`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (resposta) {
+
+        if (resposta.ok) {
+            resposta.json().then((json) => {
+                console.log(json)
+                var soma = json[0].quantidadeDificuldade + json[1].quantidadeDificuldade + json[2].quantidadeDificuldade + json[3].quantidadeDificuldade
+                var ilha2Percentual = (json[0].quantidadeDificuldade / soma) * 100
+                var ilhaInfernalPercentual = (json[1].quantidadeDificuldade / soma) * 100
+                var ilha3Percentual = (json[2].quantidadeDificuldade / soma) * 100
+                var ilha1Percentual = (json[3].quantidadeDificuldade / soma) * 100
+
+                regioes.push(Math.round(ilha2Percentual))
+                regioes.push(Math.round(ilhaInfernalPercentual))
+                regioes.push(Math.round(ilha3Percentual))
+                regioes.push(Math.round(ilha1Percentual))
+            }).then(() => {
+                carregarGrafico()
+            })
+        } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+
+    function carregarGrafico() {
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Ilha Tinteiro II', 'Ilha Tinteiro Infernal', 'Ilha Tinteiro III', 'Ilha Tinteiro I'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [regioes[0], regioes[1], regioes[2], regioes[3]],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(255, 100, 86)'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                plugins: {
+                    datalabels: {
+                        color: 'white',
+                        formatter: function (value, context) {
+                            return Math.round(value / context.chart.getDatasetMeta(0).total * 100) + "%";
+                        }
+                    }
+                }
+            }
+        });
+    }
 
 
 </script>

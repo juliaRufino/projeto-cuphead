@@ -23,13 +23,6 @@
                 </div>
             </a>
 
-            <a href="feed.html">
-                <div class="botao">
-                    <img class="iconMenuLateral" src="../assets/img/iconWorld.svg">
-                    <h4>Feed</h4>
-                </div>
-            </a>
-
             <a href="ranking.html">
                 <div class="botao  selecionado">
                     <img class="iconMenuLateral" src="../assets/img/iconRanking.svg">
@@ -2940,9 +2933,10 @@
 
     const btnEnviar = document.getElementById('btnEnviar');
 
+
     function inserirVotoUsuario() {
-        
-        for (var i = 1; i <= 19; i++) {
+        try {
+            for (var i = 1; i <= 19; i++) {
             escolhas = document.querySelector(`input[name="dificuldadeChefe${i}"]:checked`).value;
             escolhasDificuldade.push(escolhas)
         }
@@ -2954,11 +2948,14 @@
         }
 
         finalizarRanking();
-        btnEnviar.addEventListener('click', obterRanking())
-        return false;
-
+        setTimeout(()=>{
+            window.location.reload()
+        }, 50)
+        return true;
+        } catch (error) {
+            alert("Voto Incompleto")
+        } 
     }
-
 
     async function enviarDificuldade(id, chefe, dificuldade) {
         await fetch("/votoUsuario/inserirVotoUsuario", {

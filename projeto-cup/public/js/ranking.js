@@ -238,6 +238,7 @@ async function obterRanking() {
     }).then((resposta) => {
         if (resposta.ok) {
             console.log(resposta)
+            corpoTabela.innerHTML = ""
             resposta.json().then((tabela) => {
                 tabela.forEach(linha => {
                     document.getElementById('corpoTabela').innerHTML += `
