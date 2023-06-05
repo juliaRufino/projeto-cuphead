@@ -13,7 +13,8 @@ function exibirRanking(fkUsuario) {
     var instrucao = `
     SELECT chefe.foto, chefe.nome, votoUsuario.dificuldade FROM chefe JOIN votoUsuario
     ON fkChefe = idChefe
-    WHERE fkUsuario = ${fkUsuario};
+    WHERE fkUsuario = ${fkUsuario}
+    ORDER BY FIELD(dificuldade, 'Muito Difícil', 'Difícil', 'Médio', 'Fácil');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
