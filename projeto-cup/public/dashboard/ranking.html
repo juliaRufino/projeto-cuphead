@@ -2787,8 +2787,7 @@
             <div class="modal">
                 <img src="../assets/img/cupheadModal.svg">
                 <h1>FInalizar Ranking?</h1>
-                <span>Você está preste a finalizar o seu ranking, depois que finaliza-lo não poderá edita-lo novamente. 
-                Você tem certeza disso?</span>
+                <span>Você está preste a finalizar o seu ranking. Você tem certeza disso?</span>
                 <div class="areaBotao">
                     <button class="botaoRankingClassificacao voltar" onclick="voltarParaRanking()">Cancelar</button>
                     <button class="botaoRankingClassificacao enviar" onclick="inserirVotoUsuario()">Finalizar</button>
@@ -2814,101 +2813,6 @@
                     </thead>
 
                     <tbody id="corpoTabela">
-                        <!-- <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeCenoura.svg"></td>
-                            <td>Chaunsey Chantenay</td>
-                            <td id="dificuldadeBoos1"></td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeBolaAzul.svg"></td>
-                            <td>Il Melecone</td>
-                            <td id="dificuldadeBoos2"></td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeGeni.svg"></td>
-                            <td>Geni Buarque</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeGirassol.svg"></td>
-                            <td>Cactônio Spinoza</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeSapo.svg"></td>
-                            <td>Escoaxo e Sopapo</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeGarotaDoce.svg"></td>
-                            <td>Baronesa Bombom</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefePalhaco.svg"></td>
-                            <td>Zobo o Palhaço</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeGenio.svg"></td>
-                            <td>Genésio o Magnífico</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr>
-                        <tr>
-                            <td><img class="imgChefeTabela" src="../assets/img/chefeDragao.svg"></td>
-                            <td>Fogo de Chão</td>
-                            <td>Fácil</td>
-                        </tr> -->
                     </tbody>
                     
                 </table>
@@ -2950,7 +2854,7 @@
         finalizarRanking();
         setTimeout(()=>{
             window.location.reload()
-        }, 50)
+        }, 1000)
         return true;
         } catch (error) {
             alert('Você não votou em todos os chefes!')
@@ -2964,8 +2868,6 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 idUsuarioServer: id,
                 chefeServer: chefe,
                 dificuldadeChefeServer: dificuldade
@@ -2990,6 +2892,7 @@
             headers: {
                 "Content-Type": "application/json"
             }
+            
         }).then(function (resposta) {
 
             if (resposta.ok) {
